@@ -1,6 +1,5 @@
 # PushNotifier
-
-TODO: Write a gem description
+[![Build Status](https://travis-ci.org/h0lyalg0rithm/PushNotifier.svg)](https://travis-ci.org/h0lyalg0rithm/PushNotifier)
 
 ## Installation
 
