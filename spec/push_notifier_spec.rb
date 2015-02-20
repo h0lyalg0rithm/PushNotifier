@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe PushNotifier do
- it 'test works' do
-   expect(1).to eq 1
- end
+  it 'test works' do
+    expect(1).to eq 1
+  end
 
   describe 'APNS' do
     it 'should exist' do
@@ -14,6 +14,14 @@ describe PushNotifier do
       expect(PushNotifier::APNS::DEVELOPMENT_FEEDBACK_URL).to match('feedback')
       expect(PushNotifier::APNS::PRODUCTION_FEEDBACK_URL).to match('feedback')
       expect(PushNotifier::APNS::PRODUCTION_URL).to match('push')
+    end
+    describe 'setup' do
+      it 'should require device token' do
+        expect{PushNotifier::APNS.send_message(nil,nil)}.to raise_error
+      end
+      it 'can have empty message' do
+        expect{PushNotifier::APNS.send_message('','')}.not_to raise_error
+      end
     end
   end
 end
