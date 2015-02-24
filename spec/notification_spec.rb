@@ -3,11 +3,11 @@ require 'spec_helper'
 describe PushNotifier::APNS::Notification do
   it 'sets default value ' do
     @apns = PushNotifier::APNS::Notification.new '1234','message'
-    expect(@apns.data_message).to eq 1
+    expect(@apns.alert).to eq 'message'
   end
   it 'cleans device token' do
-    @apns = PushNotifier::APNS::Notification.new '1234', 'message'
-    expect(@apns.alert).to eq 'message'
+    @apns = PushNotifier::APNS::Notification.new '<12345>', 'message'
+    expect(@apns.token).to eq ["12345"].pack("H*")
   end
   it 'saves other info as custom data' do
     @apns = PushNotifier::APNS::Notification.new '1234', 'message', data: 'test', sound: true

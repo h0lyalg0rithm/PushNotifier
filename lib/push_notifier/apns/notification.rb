@@ -3,7 +3,7 @@ require 'json'
 module PushNotifier
   class APNS
     class Notification
-      attr_accessor :options,:token
+      attr_accessor :options, :token
       def initialize(token, message, options={})
         default_options
         dynamic_accessor options
@@ -28,7 +28,7 @@ module PushNotifier
         custom_data = aps.delete('custom_data')
         custom_data[:aps] = aps
         puts custom_data
-        custom_data.to_json#.gsub(/\\u([\da-fA-F]{4})/) {|m| [$1].pack("H*").unpack("n*").pack("U*")}
+        custom_data.to_json.gsub(/\\u([\da-fA-F]{4})/) {|m| [$1].pack("H*").unpack("n*").pack("U*")}
       end
 
       def allowed_attrs
