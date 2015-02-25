@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PushNotifier::VERSION
   spec.authors       = ['Suraj Shirvankar']
   spec.email         = ['surajshirvankar@gmail.com']
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = ""
+  spec.description   = ""
   spec.homepage      = ''
   spec.license       = 'MIT'
 
