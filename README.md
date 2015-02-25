@@ -18,8 +18,17 @@ Or install it yourself as:
     $ gem install push_notifier
 
 ## Usage
+```
+APNS = PushNotifier::APNS.set_mode :production
 
-TODO: Write usage instructions here
+APNS.certificate = 'certificate.pem'
+APNS.passphrase = 'passphrase' #If you have pasword protected the certiicate 
+
+notification = PushNotifier::APNS::Notification.new '<device_token>', 'message'
+
+APNS.send_message notification
+
+```
 
 ## Contributing
 
