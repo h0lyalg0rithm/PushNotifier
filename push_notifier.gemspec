@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['surajshirvankar@gmail.com']
   spec.summary       = ""
   spec.description   = ""
-  spec.homepage      = ''
+  spec.homepage      = 'http://github.com/h0lyalg0rithm/PushNotifier'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
